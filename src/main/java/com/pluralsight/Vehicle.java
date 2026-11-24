@@ -7,6 +7,14 @@ public class Vehicle {
     private int numberOfPassengers;
     private int cargoCapacity;
 
+    public Vehicle (String color, int fuelCapacity, int numberOfPassengers, int cargoCapacity){
+        this.color = color;
+        this.fuelCapacity = fuelCapacity;
+        this.numberOfPassengers = numberOfPassengers;
+        this.cargoCapacity = cargoCapacity;
+
+    }
+
     public int getNumberOfPassengers() {
         return numberOfPassengers;
     }
@@ -40,19 +48,19 @@ public class Vehicle {
     }
 
     public static void main(String[] args) {
-        Moped slowRide = new Moped();
-        slowRide.setColor("Red");
+        Moped slowRide = new Moped("Red", 1, 0, 5);
+        slowRide.setColor("red");
         slowRide.setFuelCapacity(5);
 
-        Car myCar = new Car();
+        Car myCar = new Car("Blue", 3, 0, 4);
         myCar.setColor("Blue");
         myCar.setNumberOfPassengers(5);
 
-        SemiTruck myTruck = new SemiTruck();
+        SemiTruck myTruck = new SemiTruck("Green", 2, 10, 7);
         myTruck.setColor("Green");
         myTruck.setCargoCapacity(1000);
 
-        HoverCraft myHovercraft = new HoverCraft();
+        HoverCraft myHovercraft = new HoverCraft("White", 2, 1, 7);
         myHovercraft.setColor("White");
     }
 }
